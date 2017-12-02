@@ -270,8 +270,8 @@ textarea {
 	color: #404040;
 	font-family: 'Source Sans Pro',sans-serif;
 	font-weight: bold;
-	font-size: 26px;
-	font-size: 2rem;
+	font-size: 22px;
+	font-size: 1.2rem;
 	line-height: 1.8;
 }
 
@@ -333,14 +333,12 @@ big {
 html {
 	box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
-
 body {
 	background: yellow;
 	/* Fallback for when there is no custom background color defined. */
@@ -481,6 +479,15 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Site-Branding
+--------------------------------------------------------------*/
+.site-header img{
+	max-width:400px;
+	height:auto;
+}
+
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -554,11 +561,35 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	background:black;
+	margin-right: 10px;
+	border:2px solid black;
+	transform: rotate(5deg);
 }
 
+.main-navigation li:nth-of-type(odd){
+	transform: rotate(-2deg);
+}
+
+
 .main-navigation a {
+	color:white;
+	font-weight: normal;
 	display: block;
+	padding:5px 10px;
 	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-navigation li:hover{
+	background-color: none;
+	background: url('img/fondsmall.png') ;
+	background-repeat: repeat;
+}
+
+.main-navigation li:hover a {
+	color:black;
+	font-weight: normal;
 }
 
 /* Small menu. */
