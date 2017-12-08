@@ -156,3 +156,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+/* Beuchat & Waldis's functions */
+
+/**
+ * Register Widget Area.
+ *
+ */
+function wpgyan_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Header Sidebar',
+		'id' => 'header_sidebar',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'wpgyan_widgets_init' );

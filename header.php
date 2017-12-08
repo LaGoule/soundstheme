@@ -53,6 +53,11 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="site-hours">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header_sidebar') ) : endif; ?>
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
