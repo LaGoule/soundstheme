@@ -29,6 +29,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Navigation
 	## Links
 	## Menus
+# Structure
 # Accessibility
 # Alignments
 # Clearings
@@ -478,14 +479,6 @@ textarea {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Site-Branding
---------------------------------------------------------------*/
-.site-header img{
-	max-width:400px;
-	height:auto;
-}
-
 
 /*--------------------------------------------------------------
 # Navigation
@@ -627,6 +620,25 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+
+#site-wrapper{
+	padding:10px;
+}
+.site-header {
+	background:#ddd;
+}
+.site-header img{
+	max-width:400px;
+	height:auto;
+}
+
+#colophon{
+	background:black;
 }
 
 /*--------------------------------------------------------------
