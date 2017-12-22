@@ -819,6 +819,12 @@ a:hover, a:active {
 .sections h2{
 	color:white;
 	background:black;
+	background:black;
+  	bottom:20px;
+  	color:white;
+  	margin:9%;
+  	padding:6px;
+  	position:relative;
 }
 #colophon{
 	height:100px;
