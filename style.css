@@ -808,24 +808,37 @@ a:hover, a:active {
 	padding: 0 20px;
 	background:white;
 	margin:0 0 40px 0;
+	
 }
 .sections:first-child{
 	width:45%;
-	margin:0 5% 0 50%;
+	margin-right: 5%; 
+	margin-left: 50%;
 }
 .sections:last-child{
 	display:none;
 }
-.sections h2{
+.sections h2 {
 	color:white;
 	background:black;
 	background:black;
   	bottom:20px;
   	color:white;
-  	margin:9%;
-  	padding:6px;
+  	margin:10px 0;
+  	padding:6px 20px;
   	position:relative;
+	border:1.5px solid black;
+	transform: rotate(-2deg);
 }
+.sections .sec-content{
+   color:black;
+  font-size:1.4em;
+  list-style-type:none;
+  font-weight:600;
+  line-height:1.3em;
+  padding:10px 0 30px 10px;
+  }
+  
 #colophon{
 	height:100px;
 	background:black;
