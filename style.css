@@ -296,7 +296,18 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: 'OCRA',sans-serif;
+	
 }
+
+h1, h2, h3, {
+	 color:white;
+  display:block;
+  font-size:0.9em;
+  font-weight:normal;
+  letter-spacing:0.2em;
+  padding:3px 10px;
+  text-decoration:none;
+  text-transform:uppercase;}
 
 p {
 	margin-bottom: 1.5em;
@@ -648,11 +659,12 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 #site-wrapper{
-	padding:20px;
+	padding:20px 0;
 }
 .site-header {
 	height:400px;
 	margin-bottom:60px;
+	padding:0 20px;
 }
 .site-header img{
 	max-width:400px;
@@ -791,10 +803,29 @@ a:hover, a:active {
 	clear:both;
 }
 
+.sections{
+	padding: 0 20px;
+	background:white;
+	margin:0 0 40px 0;
+}
+.sections:first-child{
+	width:45%;
+	margin:0 5% 0 50%;
+}
+.sections:last-child{
+	display:none;
+}
+.sections h2{
+	color:white;
+	background:black;
+}
+
 
 
 #colophon{
+	height:100px;
 	background:black;
+	margin-top: 60px;
 }
 
 /*--------------------------------------------------------------
