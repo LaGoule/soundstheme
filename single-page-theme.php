@@ -10,13 +10,13 @@
           <?php
             $pages = get_pages();
             foreach ($pages as $page_data) {
-                ?><div class='section'><?php
                  $content = apply_filters(‘the_content’, $page_data->post_content);
                  $title = $page_data->post_title;
-                 echo "<div class='section'>";
+                 echo "<div class='sections'><h2 class='sec-title'>";
                  echo $title;
+                 echo "</h2><div class='sec-content'>";
                  echo $content;
-                 echo "<div>";
+                 echo "</div></div>";
             }
           ?>
 
