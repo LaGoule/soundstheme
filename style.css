@@ -106,6 +106,12 @@ strong {
 	font-weight: bold;
 }
 
+em {
+	font-style: normal !important;
+	font-weight: lighter;
+	text-transform: none;
+}
+
 dfn {
 	font-style: italic;
 }
@@ -260,7 +266,18 @@ th {
 # Typography
 --------------------------------------------------------------*/
 
+/* 'Source Sans Pro' */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700,700i');
+
+/* 'OCR A Extended' */
+@font-face {
+font-family: 'OCRA';
+src: url('fonts/OCRAExtended.eot'); /* IE9 Compat Modes */
+src: url('fonts/OCRAExtended.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('fonts/OCRAExtended.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('fonts/OCRAExtended.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('fonts/OCRAExtended.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 body,
 button,
@@ -269,7 +286,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'Source Sans Pro',sans-serif;
+	font-family: 'Source Sans Pro',sans-serif; /*'Source Sans Pro'*/
 	font-weight: bold;
 	font-size: 22px;
 	font-size: 1.2rem;
@@ -278,6 +295,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: 'OCRA',sans-serif;
 }
 
 p {
@@ -510,6 +528,7 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+	font-family: 'OCRA',sans-serif;
 	clear: both;
 	display: block;
 	float: left;
@@ -521,6 +540,8 @@ a:hover, a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+
+	position:relative;
 }
 
 .main-navigation ul ul {
@@ -556,27 +577,27 @@ a:hover, a:active {
 	position: relative;
 	background:black;
 	margin-right: 10px;
-	border:2px solid black;
+	margin-bottom: 20px;
+	border:1.5px solid black;
 	transform: rotate(5deg);
-}
-
-.main-navigation li:nth-of-type(odd){
-	transform: rotate(-2deg);
+	position:absolute;
 }
 
 
 .main-navigation a {
 	color:white;
+	font-size: 0.9em;
 	font-weight: normal;
 	display: block;
-	padding:5px 10px;
+	letter-spacing:0.2em;
+	padding:3px 10px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 .main-navigation li:hover{
 	background-color: none;
-	background: url('img/fondsmall.png') ;
+	background: url('img/fondsmall.png') repeat center center ;
 	background-repeat: repeat;
 }
 
@@ -627,15 +648,150 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 #site-wrapper{
-	padding:10px;
+	padding:20px;
 }
 .site-header {
-	background:#ddd;
+	height:400px;
+	margin-bottom:60px;
 }
 .site-header img{
 	max-width:400px;
 	height:auto;
 }
+.site-branding {
+	max-width: 400px;
+	float: left;
+	clear:none;
+}
+.main-navigation{
+	max-width: calc(100% - 600px);
+	height:100%;
+	float:left;
+	clear:none;
+	z-index:40;
+	position:relative;
+	top:58px;
+	right:20px;
+}
+.main-navigation li:nth-child(1) {
+	top:0;
+	left:5%;
+}
+.main-navigation li:nth-child(2) {
+	top:105px;
+	left:20%;
+}
+.main-navigation li:nth-child(3) {
+	top:200px;
+	left:42%;
+}
+.main-navigation li:nth-child(4) {
+	top:0px;
+	right:5%;
+	background:none;
+	border:none;
+}
+.main-navigation li:nth-child(4) a{
+	width:25px;
+	height:25px;
+	text-indent:-999em;
+	background: url('img/fb.png') no-repeat center;
+	background-size: 25px 25px;
+}
+.main-navigation li:nth-child(5) {
+	top:60px;
+	right:8%;
+	background:none;
+	border:none;
+}
+.main-navigation li:nth-child(5) a{
+	width:25px;
+	height:25px;
+	text-indent:-999em;
+	background: url('img/ig.png') no-repeat center;
+	background-size: 25px 25px;
+}
+.main-navigation li:nth-child(6) {
+	top:120px;
+	right:12%;
+	transform: rotate(-1deg);
+}
+
+.main-navigation li:nth-of-type(odd){
+	transform: rotate(-2deg);
+}
+.site-hours{
+	max-width:200px;
+	display:block;
+	float:right;
+	position:relative;
+	top:20px;
+}
+/* Bitmap shadow */
+.site-hours::before{
+	content:'';
+	width:100%;
+	height:87%;
+	display:block;
+	background:url('img/fondsmall.png') bottom right;
+	position:absolute;
+	top:60px;
+	right:20px;
+	z-index:-900;
+}
+.site-hours h2{
+	max-width:130px;
+	display: inline-block;
+	font-size: 0.9em;
+	color:white;
+	font-weight: normal;
+	letter-spacing:0.2em;
+	display: block;
+	padding:4px 10px;
+	margin:0;
+	position:relative;
+	top:20px;
+	left:18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background:black;
+	z-index:30;
+	transform: rotate(-5deg);
+}
+.site-hours ul{
+	width:200px;
+	background:white;
+	margin:0;
+	padding:0;
+	display:block;
+	border-left: 1.5px black solid;
+	border-right: 1.5px black solid;
+	border-top: 1.5px black solid;
+	position: relative;
+	z-index:20;
+}
+.site-hours li{
+	color:black;
+	font-size:1.1em;
+	list-style-type: none;
+	margin:0;
+	padding:7px 10px;
+	border-bottom: 1.5px black solid;
+	text-transform: uppercase;
+}
+.site-hours li:first-child{
+	padding-top:36px;
+}
+.site-hours li em{
+	position: absolute;
+	right: 10px;
+}
+
+#content{
+	clear:both;
+}
+
+
 
 #colophon{
 	background:black;
