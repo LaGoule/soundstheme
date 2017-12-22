@@ -296,6 +296,18 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: 'OCRA',sans-serif;
+
+}
+
+h1, h2, h3, {
+	color:white;
+  display:block;
+  font-size:0.9em !important;
+  font-weight:normal;
+  letter-spacing:0.2em;
+  padding:3px 10px;
+  text-decoration:none;
+  text-transform:uppercase;
 }
 
 p {
@@ -808,14 +820,12 @@ a:hover, a:active {
 	color:white;
 	background:black;
 }
-
 #colophon{
 	height:100px;
 	background:black;
 	margin-top: 60px;
 	position:relative;
 	top:40px;
-}
 
 /*--------------------------------------------------------------
 # Accessibility
