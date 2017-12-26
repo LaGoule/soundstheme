@@ -15,6 +15,11 @@
                  echo "<div class='sections'><h2 class='sec-title'>";
                  echo $title;
                  echo "</h2><div class='sec-content more'>";
+                 //Si le lien "image du magasin" existe, on l'affiche
+                  if(get_field( "shop-pic" )){
+                    $shoppic = get_field('shop-pic');
+                    echo '<a class="foobox" href="' . $shoppic .'">[Image du magasin]</a>';
+                  }
                  echo $content;
                  echo "</div></div>";
             }
