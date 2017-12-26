@@ -518,6 +518,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: royalblue;
+	text-decoration: none;
 }
 
 a:visited {
@@ -822,6 +823,7 @@ a:hover, a:active {
 
 }
 
+.sections .shop-picture{
 	display:none;
 }
 /* Bitmap shadow */
@@ -843,6 +845,7 @@ a:hover, a:active {
 	margin-left:5%;
 	margin-right:5%;
 }
+.sections:first-child .shop-picture{
 	display:block;
 }
 

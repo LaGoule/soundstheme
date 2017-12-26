@@ -1,12 +1,12 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
     // Configure/customize these variables.
-    var showChar = 100;  // How many characters are shown by default
+    var showChar = 60;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Voir + >";
     var lesstext = "Voir -";
 
 
-    $('.more').each(function() {
+    $('.sec-content').each(function() {
         var content = $(this).html();
 
         if(content.length > showChar) {
