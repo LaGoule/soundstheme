@@ -14,7 +14,7 @@
                  $title = $page_data->post_title;
                  echo "<div class='sections'><h2 class='sec-title'>";
                  echo $title;
-                 echo "</h2><div class='sec-content'>";
+                 echo "</h2><div class='sec-content more'>";
                  echo $content;
                  echo "</div></div>";
             }

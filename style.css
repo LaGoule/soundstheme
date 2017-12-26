@@ -659,6 +659,14 @@ a:hover, a:active {
 # Structure
 --------------------------------------------------------------*/
 
+.skip-link{
+	display:none;
+}
+
+
+
+
+
 #site-wrapper{
 	padding:20px 0;
 }
