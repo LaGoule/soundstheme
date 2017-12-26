@@ -667,6 +667,7 @@ a:hover, a:active {
 
 
 
+
 #site-wrapper{
 	padding:20px 0;
 }
@@ -820,6 +821,9 @@ a:hover, a:active {
 	position:relative;
 
 }
+
+	display:none;
+}
 /* Bitmap shadow */
 .sections::before{
 	content:'';
@@ -839,6 +843,9 @@ a:hover, a:active {
 	margin-left:5%;
 	margin-right:5%;
 }
+	display:block;
+}
+
 .sections:last-child{
 	display:none;
 }

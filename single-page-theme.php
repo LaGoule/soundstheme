@@ -12,17 +12,24 @@
             foreach ($pages as $page_data) {
                  $content = apply_filters(‘the_content’, $page_data->post_content);
                  $title = $page_data->post_title;
-                 echo "<div class='sections'><h2 class='sec-title'>";
+                 $shoppic = get_field( 'shoppic' );
+                 $pageid = get_the_ID();
+
+                 //Structure et titre de la page
+                 echo "<div class='sections post-" . $pageid . "'><h2 class='sec-title'>";
                  echo $title;
                  echo "</h2><div class='sec-content more'>";
+
                  //Si le lien "image du magasin" existe, on l'affiche
-                  if(get_field( "shop-pic" )){
-                    $shoppic = get_field('shop-pic');
-                    echo '<a class="foobox" href="' . $shoppic .'">[Image du magasin]</a>';
-                  }
+                 if($shoppic){
+      ;             echo '<p class='shoppic'><a class="foobox" href="' .$shoppic.'">[Image du magasin]</a></p>';
+                 }
+                 //Contenu de la page
+                 echo '<p>';
                  echo $content;
-                 echo "</div></div>";
+                 echo "</p></div></div>";
             }
+            wp_reset_query();
           ?>
 
 
