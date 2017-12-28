@@ -4,11 +4,12 @@
     */
 
     get_header(); ?>
-
+<!--
     <div id="primary" class="site-content">
         <div id="content" role="main">
+-->
           <?php
-          
+
             wp_reset_query();
             $pages = get_pages();
             foreach ($pages as $page_data) {
@@ -35,14 +36,14 @@
           ?>
       <!--
           <?php
-            $menu_items = wp_get_nav_menu_items('main-nav');
+            $menu_items = wp_get_nav_menu_items('main-menu');
             if( $menu_items ) {
             foreach ($menu_items as $menu_item ) {
             $args = array('p' => $menu_item->object_id,'post_type' => 'any');
 
             global $wp_query;
             $wp_query = new WP_Query($args);
-            $templatePart = ($menu_item->title == 'content-page') ? 'content-page' : $menu_item->object;
+            $templatePart = ($menu_item->title == 'Playlist') ? 'playlist' : $menu_item->object;
             ?>
 
             <section <?php post_class('sep'); ?> id="<?php echo sanitize_title($menu_item->title); ?> ">
@@ -61,8 +62,12 @@
             <?php if(have_posts()):while($the_query->have_posts()):$the_query->the_post(); ?>
             <?php get_template_part("content", "page"); ?>
             <?php endwhile; endif; */ ?>
+
+
+<!--
         </div><!-- #content -->
     </div><!-- #primary -->
+-->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
