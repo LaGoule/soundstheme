@@ -22,24 +22,15 @@
 
                  //Si le lien "image du magasin" existe, on l'affiche
                  if($shoppic){
-      ;             echo '<p class='shoppic'><a class="foobox" href="' .$shoppic.'">[Image du magasin]</a></p>';
+                   echo '<p class='shoppic'><a class="foobox" href="' .$shoppic.'">[Image du magasin]</a></p>';
                  }
                  //Contenu de la page
                  echo '<p>';
                  echo $content;
                  echo "</p></div></div>";
             }
-            wp_reset_query();
           ?>
 
-
-            <?php /*
-                $args = array("post_type" => "page", "order" => "ASC", "orderby" => "menu_order");
-                $the_query = new WP_Query($args);
-            ?>
-            <?php if(have_posts()):while($the_query->have_posts()):$the_query->the_post(); ?>
-            <?php get_template_part("content", "page"); ?>
-            <?php endwhile; endif; */ ?>
         </div><!-- #content -->
     </div><!-- #primary -->
 
