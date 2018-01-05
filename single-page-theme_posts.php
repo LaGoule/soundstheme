@@ -13,7 +13,7 @@
   <main id="main" class="site-main">
 
   <?php
-  
+
   if ( have_posts() ) :
 
     if ( is_home() && ! is_front_page() ) : ?>
@@ -27,6 +27,7 @@
     /* Start the Loop */
     while ( have_posts() ) : the_post();
 
+      echo '<p>spruuuut</p>';
       /*
        * Include the Post-Format-specific template for the content.
        * If you want to override this in a child theme, then include a file
