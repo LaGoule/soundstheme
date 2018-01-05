@@ -1,9 +1,13 @@
 <?php
-    /*
-        Template Name: One-pager Template
-    */
-
-    get_header(); ?>
+  /**
+   * Template Name: One-pager Template
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   *
+   * @package soundstheme
+   */
+   get_header();
+?>
 <!--
     <div id="primary" class="site-content">
         <div id="content" role="main">
