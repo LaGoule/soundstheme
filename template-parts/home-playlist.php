@@ -2,7 +2,7 @@
 <h2 class="post-title"><?php the_title(); ?></h2>
 <div class="post-content"><?php the_content(); ?></div>
 <?php
-$args = array( 'posts_per_page'=>-1, 'post_typ'=>'realisation','orderby'=> 'menu_order', 'order'=> 'ASC'); 
+$args = array( 'posts_per_page'=>-1, 'post_typ'=>'realisation','orderby'=> 'menu_order', 'order'=> 'ASC');
 $loop = new WP_Query( $args );
 if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
 $link = get_permalink($post->ID);
