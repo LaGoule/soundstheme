@@ -1,6 +1,6 @@
 <?php
     /**
-        * Template Name: One-pager Template
+        * Template Name: One-pager Post Template
         *
         * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
         *
@@ -8,14 +8,12 @@
     */
 
     get_header(); ?>
-<!--
-    <div id="primary" class="site-content">
-        <div id="content" role="main">
--->
+
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
 
   <?php
+  
   if ( have_posts() ) :
 
     if ( is_home() && ! is_front_page() ) : ?>
