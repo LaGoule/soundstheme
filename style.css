@@ -944,14 +944,14 @@ a:hover, a:active {
 #main article:nth-child(1),
 #main article:nth-child(2),
 #main article:nth-child(4){
-	max-width:calc(50% - 40px);
+	width:calc(45% - 40px);
 	float:left;
-	margin-left:20px;
+	margin-left:40px;
 }
 #main article:nth-child(2){
 	float:right;
 	margin-left:0;
-	margin-right:20px;
+	margin-right:40px;
 }
 #main article:nth-child(3){
 	clear:both;
@@ -961,11 +961,40 @@ a:hover, a:active {
 
 /* Event expiration */
 article.category-eventson{
-
+	text-align:center;
 }
+
+article.category-eventson strong{
+	font-size:50px;
+	font-weight:900;
+}
+
+article.category-eventson em{
+	font-size:25px;
+	font-weight:200;
+}
+
+article.category-eventson p{
+	font-size:30px;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+article.category-eventson .entry-title{
+	width:40%;
+	left: 50%;
+	transform:translate(-50%,0) !important;
+	bottom:30px !important;
+}
+
+
+	
+	
 article.category-eventsoff{
 	background:grey !important;
 }
+
+
 
 #colophon{
 	height:100px;
