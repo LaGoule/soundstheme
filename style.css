@@ -287,7 +287,7 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: 'Source Sans Pro',sans-serif; /*'Source Sans Pro'*/
-	font-weight: bold;
+	font-weight: 200;
 	font-size: 22px;
 	font-size: 1.2rem;
 	line-height: 1.8;
@@ -477,9 +477,9 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	border: 1px solid black;
 	padding: 3px;
+	width:100%;
 }
 
 input[type="text"]:focus,
@@ -883,7 +883,7 @@ a:hover, a:active {
   list-style-type:none;
   font-weight:600;
   line-height:1.18em;
-  padding:20px 0 20px 10px;
+  padding:20px 5px;
 }
 
 .sections .sec-content a,
