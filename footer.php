@@ -14,9 +14,19 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info" style="padding:10px;">
-			<p>Un footer</p>
+
+			<div class="column footer-menu">
+				<p>Un footer</p>
+			</div><!--.footer-menu-->
+			<div class="column">
+
+			</div><!--.column-->
+			<div class="column footer-widget">
+			</div><!--.footer-widget-->
+
+		<div class="site-info">
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #site-wrapper -->
 </div><!-- #page -->
