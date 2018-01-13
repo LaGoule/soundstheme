@@ -108,7 +108,6 @@ strong {
 
 em {
 	font-style: normal !important;
-	font-weight: lighter;
 	text-transform: none;
 }
 
@@ -287,10 +286,11 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: 'Source Sans Pro',sans-serif; /*'Source Sans Pro'*/
-	font-weight: 200;
+	font-weight: 500;
 	font-size: 22px;
 	font-size: 1.2rem;
 	line-height: 1.8;
+	padding-left:10px!important;
 }
 
 h1, h2, h3, h4, h5, h6, a {
@@ -428,19 +428,30 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
+	font-family: 'OCRA',sans-serif;
+	clear: both;
+	display: block;
+	float: left;
+	color: white;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+	background: black;
+    margin-right: 10px;
+    margin-top: 50px;
+    padding: 5px 10px 5px 10px;
+    transform: rotate(-5deg);
+    position: absolute;
+    right: 30px;
+	border:none !important;
 }
 
 button:hover,
@@ -457,7 +468,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	
 }
 
 input[type="text"],
@@ -477,7 +488,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid black;
+	border: 2px solid black;
 	padding: 3px;
 	width:100%;
 }
@@ -798,6 +809,7 @@ a:hover, a:active {
 	padding:7px 10px;
 	border-bottom: 1.5px black solid;
 	text-transform: uppercase;
+	font-weight:500;
 }
 .site-hours li:first-child{
 	padding-top:36px;
@@ -805,6 +817,7 @@ a:hover, a:active {
 .site-hours li em{
 	position: absolute;
 	right: 10px;
+	font-weight: lighter;
 }
 
 #content{
@@ -992,6 +1005,23 @@ article.category-eventson .entry-title{
 	
 article.category-eventsoff{
 	background:grey !important;
+}
+
+article form{
+	margin-bottom:100px;	
+}
+article form p {
+	margin:0;
+}
+
+article form textarea{
+	resize:vertical;
+	min-height:100px;
+}
+
+.wpcf7-quiz-label{
+	font-weight:300;
+	font-size:0.8em;
 }
 
 
