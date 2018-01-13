@@ -679,6 +679,7 @@ a:hover, a:active {
 
 #site-wrapper{
 	padding:20px 0;
+	background: url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat right top;
 }
 .site-header {
 	height:400px;
