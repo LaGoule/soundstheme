@@ -41,6 +41,11 @@
 				get_the_title()
 			) );
 
+			/* Playlists */
+			if(in_category('playlists')){
+				get_template_part( 'template-parts/content-playlist', 'playlist' );
+			}
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'soundstheme' ),
 				'after'  => '</div>',
