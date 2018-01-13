@@ -22,6 +22,10 @@
 
 			</div><!--.column-->
 			<div class="column footer-widget">
+
+					<div class="site-hours">
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header_sidebar') ) : endif; ?>
+					</div>
 			</div><!--.footer-widget-->
 
 		<div class="site-info">

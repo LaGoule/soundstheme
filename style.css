@@ -468,7 +468,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	
+
 }
 
 input[type="text"],
@@ -1002,14 +1002,14 @@ article.category-eventson .entry-title{
 }
 
 
-	
-	
+
+
 article.category-eventsoff{
 	background:grey !important;
 }
 
 article form{
-	margin-bottom:100px;	
+	margin-bottom:100px;
 }
 article form p {
 	margin:0;
@@ -1034,6 +1034,18 @@ article form textarea{
 	position:relative;
 	top:40px;
 	clear:both;
+}
+
+#colophon .column{
+	width:33%;
+	height:300px;
+	background:gray;
+	float:left;
+	margin-right:1%;
+}
+#colophon .column:last-child{
+	margin-right:0;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
