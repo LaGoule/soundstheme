@@ -679,7 +679,7 @@ a:hover, a:active {
 
 #site-wrapper{
 	padding:20px 0;
-	background: url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 65% 1100px;
+	background: url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 46% 1000px;
 
 }
 .site-header {
@@ -759,6 +759,7 @@ a:hover, a:active {
 	float:right;
 	position:relative;
 	top:20px;
+	line-height: 1.8;
 }
 /* Bitmap shadow */
 .site-hours::before{
@@ -1001,10 +1002,10 @@ article.category-eventson p{
 }
 
 article.category-eventson .entry-title{
-	width:40%;
 	left: 50%;
 	transform:translate(-50%,0) !important;
 	bottom:30px !important;
+	transform: rotate(2deg);
 }
 
 article.category-eventsoff{
@@ -1021,11 +1022,11 @@ article.category-playlists .entry-content{
 
 /* The list */
 article.category-playlists ul.the-list{
-	margin:0;
-	padding:30px 0 0 0;
+	padding:30px 0 60px 0;
 	list-style: none;
 	font-size:0.85em;
-
+	max-width:600px;
+	margin:0 auto;
 }
 article.category-playlists ul.the-list a{
 	color:black;
@@ -1041,13 +1042,15 @@ article.category-playlists ul.the-list a{
 article.category-playlists li.the-track{
 	clear:both;
 	position:relative;
-	border-bottom:1px black solid;
 }
 .the-track::after{
 	content:"";
 	display:block;
 	clear:both;
 	visibility:hidden;
+}
+.the-track:nth-child(odd){
+	background:#EEE;
 }
 article.category-playlists .the-track img.cover{
 	width:calc(20%);
@@ -1060,6 +1063,7 @@ article.category-playlists .the-track div.textwrap{
 	width:calc(80% - 2%);
 	max-width:calc(100% - 100px - 2%);
 	float:left;
+	margin:3% 0;
 }
 article.category-playlists .the-track div.textbox{
 }
@@ -1091,10 +1095,12 @@ article form{
 }
 article form p {
 	margin:0;
+	line-height:0.2em;
 }
 
 article form textarea{
 	resize:vertical;
+	height:200px;
 	min-height:100px;
 }
 
@@ -1109,19 +1115,31 @@ article form textarea{
 	background:black;
 	margin-top: 60px;
 	position:relative;
-	bottom:0;
+	top:30px;
 	clear:both;
+	overflow:hidden;
 }
 
 #colophon .column{
-	width:33%;
+	width:calc(33%);
 	height:300px;
-	background:gray;
+	padding:0 10px;
 	float:left;
-	margin-right:0.2%;
+	margin-right:0.5%;
 }
-#colophon .column:last-child{
+#colophon .column:nth-child(even){
+	background:brown;
+	padding-left:0;
+	padding-right:0;
+}
+#colophon .footer-widget{
 	margin-right:0;
+}
+#colophon .footer-widget .site-hours{
+	margin:0 auto;
+	clear:both;
+	float:none;
+	position:static;
 }
 
 /*--------------------------------------------------------------

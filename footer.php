@@ -13,13 +13,15 @@
 
 	</div><!-- #content -->
 
+</div><!-- #site-wrapper --></div>
+
 	<footer id="colophon" class="site-footer">
 
 			<div class="column footer-menu">
-				<p>Un footer</p>
+				<p>Ici un rappel de menu</p>
 			</div><!--.footer-menu-->
 			<div class="column">
-
+				<p>Ici une carte google map</p>
 			</div><!--.column-->
 			<div class="column footer-widget">
 
@@ -32,7 +34,6 @@
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
-</div><!-- #site-wrapper -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
