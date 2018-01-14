@@ -290,7 +290,6 @@ textarea {
 	font-size: 22px;
 	font-size: 1.2rem;
 	line-height: 1.8;
-	padding-left:10px!important;
 }
 
 h1, h2, h3, h4, h5, h6, a {
@@ -490,6 +489,7 @@ textarea {
 	color: #666;
 	border: 2px solid black;
 	padding: 3px;
+	padding-left: 10px;
 	width:100%;
 }
 
@@ -680,7 +680,7 @@ a:hover, a:active {
 #site-wrapper{
 	padding:20px 0;
 	background: url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 65% 1100px;
-	
+
 }
 .site-header {
 	height:400px;
@@ -845,7 +845,7 @@ a:hover, a:active {
 .content-area article.category-eventson,
 .content-area article.category-eventsoff{
 	margin-bottom:450px;
-	
+
 }
 .sections .shop-picture{
 	display:none;
@@ -1007,13 +1007,85 @@ article.category-eventson .entry-title{
 	bottom:30px !important;
 }
 
-
-
-
 article.category-eventsoff{
 	background:grey !important;
 }
 
+/* Playlists */
+article.category-playlists{
+}
+article.category-playlists .entry-content{
+	width:70%;
+	margin:0 auto;
+}
+
+/* The list */
+article.category-playlists ul.the-list{
+	margin:0;
+	padding:30px 0 0 0;
+	list-style: none;
+	font-size:0.85em;
+
+}
+article.category-playlists ul.the-list a{
+	color:black;
+	font-size:0.6em;
+	text-decoration: underline;
+	padding:0;
+	margin-left:10px;
+	text-align: right;
+	letter-spacing: normal;
+}
+
+/* The track */
+article.category-playlists li.the-track{
+	clear:both;
+	position:relative;
+	border-bottom:1px black solid;
+}
+.the-track::after{
+	content:"";
+	display:block;
+	clear:both;
+	visibility:hidden;
+}
+article.category-playlists .the-track img.cover{
+	width:calc(20%);
+	min-width:100px;
+	height:auto;
+	float:left;
+	margin-right:2%;
+}
+article.category-playlists .the-track div.textwrap{
+	width:calc(80% - 2%);
+	max-width:calc(100% - 100px - 2%);
+	float:left;
+}
+article.category-playlists .the-track div.textbox{
+}
+article.category-playlists .the-track .textbox p{
+	line-height:1.1;
+	margin:0;
+}
+article.category-playlists .the-track .textbox p.trackname{
+	font-weight:bold;
+}
+
+article.category-playlists .the-track .textbox p.trackname::before{content:"«";}
+article.category-playlists .the-track .textbox p.trackname::after{content:"»";}
+
+article.category-playlists .the-track .textbox p.description{
+	font-size:0.7em;
+	margin:15px 0 0 0;
+}
+
+article.category-playlists .the-track .textbox div.linkbox{
+	position:absolute;
+	top:-10px;
+	right:0;
+}
+
+/* Contact */
 article form{
 	margin-bottom:100px;
 }
@@ -1180,7 +1252,7 @@ article form textarea{
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0 0 0;
 }
 
 .page-links {
