@@ -1121,7 +1121,14 @@ article form textarea{
 }
 #colophon .footer-navigation ul{
 	list-style: none !important;
-	margin:0;
+	margin:40px 0 0 0;
+
+	color: white;
+	font-family: 'Source Sans Pro',sans-serif; /*'Source Sans Pro'*/
+	font-weight: 500;
+	font-size: 22px;
+	font-size: 1.2rem;
+	line-height: 1.8;
 }
 #colophon .column{
 	width:calc(33%);
