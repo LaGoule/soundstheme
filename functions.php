@@ -177,6 +177,18 @@ function wpgyan_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'wpgyan_widgets_init' );
+function footer_widgets_init() {
+
+ register_sidebar( array(
+	 'name' => 'Footer Sidebar',
+	 'id' => 'footer_sidebar',
+	 'before_widget' => '<div>',
+	 'after_widget' => '</div>',
+	 'before_title' => '',
+	 'after_title' => '',
+ ) );
+}
+add_action( 'widgets_init', 'footer_widgets_init' );
 
 /* Home page template (pas nécessaire) */
 /*

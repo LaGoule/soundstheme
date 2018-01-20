@@ -27,14 +27,15 @@
 					?>
 				</nav>
 			</div><!--.footer-menu-->
-			<div class="column">
-				<p>Ici une carte google map</p>
-			</div><!--.column-->
-			<div class="column footer-widget">
 
-					<div class="site-hours">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header_sidebar') ) : endif; ?>
-					</div>
+			<div class="column footer-map">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_sidebar') ) : endif; ?>
+			</div><!--.footer-map-->
+
+			<div class="column footer-widget">
+				<div class="site-hours">
+					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header_sidebar') ) : endif; ?>
+				</div>
 			</div><!--.footer-widget-->
 
 		<div class="site-info">

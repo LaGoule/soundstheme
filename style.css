@@ -683,8 +683,8 @@ a:hover, a:active {
 	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 12% 900px;
 
 
-	
-	
+
+
 
 }
 .site-header {
@@ -1015,7 +1015,7 @@ article.category-eventson .entry-title{
 
 article.category-eventsoff{
 	background:grey !important;
-	opacity:0;
+	opacity:0 !important;
 }
 
 /* Playlists */
