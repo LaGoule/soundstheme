@@ -30,6 +30,11 @@
 
 	<div class="entry-content">
 		<?php
+			if(get_field('shoppic')){
+				echo '<a class="shoppic foobox" href="'.get_field('shoppic').'" alt="Photo du magasin">[Le Magaz]</a>';
+			}
+		?>
+		<?php
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
