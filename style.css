@@ -688,8 +688,8 @@ a:hover, a:active {
 
 
 
-	
-	
+
+
 
 }
 .shoppic{
@@ -1024,7 +1024,7 @@ article.category-eventson .entry-title{
 
 article.category-eventsoff{
 	background:grey !important;
-	opacity:0;
+	opacity:0 !important;
 }
 
 /* Playlists */
