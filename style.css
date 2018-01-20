@@ -1015,6 +1015,7 @@ article.category-eventson .entry-title{
 
 article.category-eventsoff{
 	background:grey !important;
+	opacity:0;
 }
 
 /* Playlists */
