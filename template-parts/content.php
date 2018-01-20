@@ -30,10 +30,16 @@
 
 	<div class="entry-content">
 		<?php
+			/* About img link */
 			if(get_field('shoppic')){
 				echo '<a class="shoppic foobox" href="'.get_field('shoppic').'" alt="Photo du magasin">[Le Magaz]</a>';
 			}
+			/* Event Type */
+			if(get_field('eventtype')){
+				echo '<p><strong>'.get_field('eventtype').'</strong></p>';
+			}
 		?>
+
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -47,6 +53,11 @@
 				),
 				get_the_title()
 			) );
+
+			/* Event Date */
+			if(get_field('eventdate')){
+				echo '<p class="event-date">'.get_field('eventdate').'</p>';
+			}
 
 			/* Playlists */
 			if(in_category('playlists')){
