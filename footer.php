@@ -18,7 +18,14 @@
 	<footer id="colophon" class="site-footer">
 
 			<div class="column footer-menu">
-				<p>Ici un rappel de menu</p>
+				<nav class="footer-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'footer-menu',
+						) );
+					?>
+				</nav>
 			</div><!--.footer-menu-->
 			<div class="column">
 				<p>Ici une carte google map</p>
