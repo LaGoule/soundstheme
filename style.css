@@ -680,13 +680,22 @@ a:hover, a:active {
 #site-wrapper{
 	padding:20px 0;
 	background: url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 46% 1000px,
-	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 12% 900px;
+	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 8% 940px,
+	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 80% 2180px,
+	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/04.png) no-repeat 85% 540px,
+	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 90% 1100px,
+	 url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 60% 200px;
+
 
 
 	
 	
 
 }
+.shoppic{
+	color:black!important;
+}
+
 .site-header {
 	height:400px;
 	margin-bottom:60px;
