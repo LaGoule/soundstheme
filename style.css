@@ -1119,7 +1119,10 @@ article form textarea{
 	clear:both;
 	overflow:hidden;
 }
-
+#colophon .footer-navigation ul{
+	list-style: none !important;
+	margin:0;
+}
 #colophon .column{
 	width:calc(33%);
 	height:300px;
@@ -1140,6 +1143,9 @@ article form textarea{
 	clear:both;
 	float:none;
 	position:static;
+}
+#colophon .footer-widget .site-hours::before{
+	display:none;
 }
 
 /*--------------------------------------------------------------
