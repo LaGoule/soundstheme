@@ -14,35 +14,40 @@
 
   <?php
 
-  if ( have_posts() ) :
-
     if ( is_home() && ! is_front_page() ) : ?>
       <header>
         <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
       </header>
-
     <?php
     endif;
+?>
 
-    /* Start the Loop */
-    while ( have_posts() ) : the_post();
 
-      /*
-       * Include the Post-Format-specific template for the content.
-       * If you want to override this in a child theme, then include a file
-       * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-       */
-      get_template_part( 'template-parts/content', get_post_format() );
 
-    endwhile;
+<?php
+// the query
+$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 
-    the_posts_navigation();
+<?php if ( $wpb_all_query->have_posts() ) : ?>
 
-  else :
 
-    get_template_part( 'template-parts/content', 'none' );
 
-  endif; ?>
+    <!-- the loop -->
+    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+    <?php endwhile; ?>
+    <!-- end of the loop -->
+
+
+
+    <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+
+
 
   </main><!-- #main -->
 </div><!-- #primary -->
