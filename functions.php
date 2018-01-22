@@ -190,6 +190,18 @@ function footer_widgets_init() {
 }
 add_action( 'widgets_init', 'footer_widgets_init' );
 
+/* Ajout de la class .anchorlink au liens du menus*/
+function add_menuclass($ulclass) {
+   return preg_replace('/<a /', '<a class="anchorlink"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');
+/* On ajoute le script js à la file enqueue */
+function anchorenq() {
+	return wp_enqueue_script( 'anchor-scipt', get_stylesheet_uri() . '/../js/anchorlink.js' );
+}
+add_action( 'wp_enqueue_scripts', 'anchorenq', 1.0 );
+
+
 /* Home page template (pas nécessaire) */
 /*
 if(get_page_by_title("Home") == null)
