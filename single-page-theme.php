@@ -1,43 +1,56 @@
 <?php
-  /**
-   * Template Name: One-pager Template
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-   *
-   * @package soundstheme
-   */
-   get_header();
+    /**
+        * Template Name: One-pager Post Template
+        *
+        * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+        *
+        * @package soundstheme
+    */
+
+    get_header(); ?>
+
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+
+  <?php
+
+    if ( is_home() && ! is_front_page() ) : ?>
+      <header>
+        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+      </header>
+    <?php
+    endif;
 ?>
-<!--
-    <div id="primary" class="site-content">
-        <div id="content" role="main">
--->
-          <?php
-            $pages = get_pages();
-            foreach ($pages as $page_data) {
-                 $content = apply_filters(‘the_content’, $page_data->post_content);
-                 $title = $page_data->post_title;
-                 $shoppic = get_field( 'shoppic' );
-                 $secid = $page_data->post_id;
 
-                 //Structure et titre de la page
-                 echo "<div class='sections post-" . $secid . "'><h2 class='sec-title'>";
-                 echo $title;
-                 echo "</h2><div class='sec-content'>";
 
-                 //Si le lien "image du magasin" existe, on l'affiche
-                 if($shoppic){
-                   echo '<p class='shoppic'><a class="foobox" href="' .$shoppic.'">[Image du magasin]</a></p>';
-                 }
-                 //Contenu de la page
-                 echo '<p>';
-                 echo $content;
-                 echo "</p></div></div>";
-            }
-          ?>
 
-        </div><!-- #content -->
-    </div><!-- #primary -->
+<?php
+// the query
+$wpb_all_query = new WP_Query(array('post_type'=>'post', 'cat'=>-1, 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+
+<?php if ( $wpb_all_query->have_posts() ) : ?>
+
+
+
+    <!-- the loop -->
+    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+    <?php endwhile; ?>
+    <!-- end of the loop -->
+
+
+
+    <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+
+
+
+  </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
