@@ -1090,8 +1090,8 @@ article.category-playlists .the-track .textbox p.trackname{
 	font-weight:bold;
 }
 
-article.category-playlists .the-track .textbox p.trackname::before{content:"«";}
-article.category-playlists .the-track .textbox p.trackname::after{content:"»";}
+article.category-playlists .the-track .textbox p.trackname::before{content:"\"";}
+article.category-playlists .the-track .textbox p.trackname::after{content:"\"";}
 
 article.category-playlists .the-track .textbox p.description{
 	font-size:0.7em;
@@ -1426,4 +1426,23 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Responsive
+--------------------------------------------------------------*/
+
+/* Tablettes */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+
+}
+
+/* Smartphones */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	#main article:nth-child(2){
+		width: calc(100% - 20px) !important;
+	}
+
 }
