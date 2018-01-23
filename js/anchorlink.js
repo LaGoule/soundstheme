@@ -5,7 +5,7 @@ $('a[href^="#"]').live('click',function(event){
     var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
     //change this number to create the additional off set
     var customoffset = 70;
-    $('html, body').animate({scrollTop:target_offset - customoffset}, 100);
+    $('html, body').animate({scrollTop:target_offset - customoffset}, 600);
 });
 
 }(jQuery));

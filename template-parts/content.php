@@ -14,6 +14,11 @@
 		<?php
 		if ( is_singular() ) :
 			$postid = get_the_ID();
+
+			if(in_category('playlists')){
+	      //Ancre vide pour la section playlist
+	      echo '<div id="playlists" style="height:0;width:0;text-indent:-9999em;">Playlist du mois</div>';
+			}
 			the_title( '<h2 class="entry-title"><a href="#post-'. $postid .'" rel="bookmark">', '</a></h2>' );
 		else :
 			$postid = get_the_ID();
