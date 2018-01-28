@@ -37,12 +37,21 @@
 	<div class="entry-content">
 		<?php
 			/* About img link */
+			/*
 			if(get_field('shoppic')){
-				echo '<a class="shoppic foobox" href="'.get_field('shoppic').'" alt="Photo du magasin">[Le Magaz]</a>';
+				echo '<p><a class="shoppic foobox" href="'.get_field('shoppic').'" alt="Photo du magasin">[Le Magaz]</a></p>';
 			}
+			*/
 			/* Event Type */
 			if(get_field('eventtype')){
 				echo '<p><strong>'.get_field('eventtype').'</strong></p>';
+			}
+			/* On affiche l'image à la une */
+			if ( has_post_thumbnail() ) {
+				$fiurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				echo '<div class="feat-image"><a class="foobox" href="'.$fiurl.'">';
+				the_post_thumbnail('large');
+				echo '</a></div>';
 			}
 		?>
 

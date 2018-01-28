@@ -679,19 +679,21 @@ a:hover, a:active {
 
 #site-wrapper{
 	padding:20px 0 80px 0;
+	max-width:1440px;
+	margin:0 auto;
 	background:
+		/* Le son qui tue Event */
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/04.png) no-repeat 94% 25%,
 		/* Chien */
 		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 50% 43%,
 		/* Logo Sounds flottant*/
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 8% 36%,
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 8% 48%,
 		/* Bonhomme danse */
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 93% 2100px,
-		/* Le son qui tue Event */
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/04.png) no-repeat 85% 550px,
-		/* S */
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 98% 101%,
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 93% 83%,
 		/* Quadrillage */
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 60% 94%;
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 60% 95%,
+		/* S */
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 50% 72%;
 }
 
 .shoppic{
@@ -852,12 +854,23 @@ a:hover, a:active {
 /* sections / article */
 .sections,
 .content-area article{
-	padding: 0 20px 20px 20px;
+	padding: 0 0px 20px 0px;
 	background:white;
 	margin:60px 0 200px 0;
 	position:relative;
-
 }
+.content-area article p,
+.content-area article .su-expand{
+	padding: 0 20px;
+}
+.content-area article img{
+	text-align:center;
+	margin:0 auto !important;
+}
+.content-area article h2.entry-title{
+	margin: 0 20px !important;
+}
+
 
 .content-area article.category-eventson,
 .content-area article.category-eventsoff{
@@ -931,6 +944,11 @@ a:hover, a:active {
 	padding:3px 10px;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+.content-area article .entry-content a.foobox,
+.content-area article .entry-content a.foobox img{
+	display:block;
+	padding:0;
 }
 
 /* Lien voir + voir - */
@@ -1008,7 +1026,6 @@ article.category-eventson strong{
 	font-weight:900;
 }
 article.category-eventson img{
-	margin-bottom: 20px;
 }
 article.category-eventson p{
 	font-size:23px;
@@ -1022,22 +1039,21 @@ article.category-eventson .event-date{
 	text-decoration: underline;
 }
 article.category-eventson .entry-title{
-	left: 50%;
-	transform:translate(-50%,0) !important;
-	bottom:30px !important;
-	transform: rotate(2deg);
+	transform: rotate(1deg);
 }
-article.category-eventsoff{
-	background:grey !important;
-	opacity:0 !important;
+article.category-eventsoff
 }
 
 /* Playlists */
 article.category-playlists{
 }
 article.category-playlists .entry-content{
-	width:70%;
+	max-width:600px;
 	margin:0 auto;
+	padding-top:30px;
+}
+article.category-playlists .entry-content p{
+	padding:0;
 }
 
 /* The list */
@@ -1070,7 +1086,7 @@ article.category-playlists li.the-track{
 	visibility:hidden;
 }
 .the-track:nth-child(odd){
-	background:#EEE;
+	background:yellow;
 }
 article.category-playlists .the-track img.cover{
 	width:calc(20%);
@@ -1082,7 +1098,7 @@ article.category-playlists .the-track img.cover{
 article.category-playlists .the-track div.textwrap{
 	width:calc(80% - 2%);
 	max-width:calc(100% - 100px - 2%);
-	float:left;
+	float:right;
 	margin:3% 0;
 }
 article.category-playlists .the-track div.textbox{
@@ -1091,8 +1107,13 @@ article.category-playlists .the-track .textbox p{
 	line-height:1.1;
 	margin:0;
 }
+article.category-playlists .the-track .textbox p.artist{
+	font-size:0.8em;
+	text-transform: uppercase;
+}
 article.category-playlists .the-track .textbox p.trackname{
 	font-weight:bold;
+	text-transform: capitalize;
 }
 
 article.category-playlists .the-track .textbox p.trackname::before{content:"\"";}
@@ -1105,7 +1126,7 @@ article.category-playlists .the-track .textbox p.description{
 
 article.category-playlists .the-track .textbox div.linkbox{
 	position:absolute;
-	top:-10px;
+	bottom:3%;
 	right:0;
 }
 
@@ -1119,6 +1140,10 @@ article.category-contact form{
 article.category-contact form p {
 	margin:0;
 	line-height:0.2em;
+		margin-left:0 !important;
+		margin-right:0 !important;
+		padding-left:0 !important;
+		padding-right:0 !important;
 }
 article.category-contact form textarea{
 	resize:vertical;
@@ -1156,15 +1181,23 @@ article.category-contact form .wpcf7-quiz-label{
 	height:300px;
 	padding:0 10px;
 	float:left;
-	margin-right:0.5%;
+	padding-right:0.5%;
 }
 #colophon .column:nth-child(even){
-	background:brown;
+	background:#ccc;
 	padding-left:0;
 	padding-right:0;
 }
 #colophon .footer-widget{
 	margin-right:0;
+}
+#colophon .column:first-child{
+	background:url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/logohd.png) no-repeat bottom right;
+	background-size:contain;
+	background-position: 18vw 11vh;
+}
+#colophon .footer-navigation a{
+	font-family: 'Source Sans Pro',sans-serif !important; /*'Source Sans Pro'*/
 }
 #colophon .footer-widget .site-hours{
 	margin:0 auto;
@@ -1441,11 +1474,29 @@ object {
 /* Tablettes */
 @media only screen and (max-width : 1024px) {
 
+	#site-wrapper{
+	}
+
 	#main article:nth-child(1),
 	#main article:nth-child(2),
 	#main article:nth-child(4){
 		width: calc(100% - 40px);
 		float:none;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#main article{
+		max-width:600px;
+	}
+
+	#main article.category-about {
+	    margin-bottom:200px;
+	}
+
+	#main article.category-playlists{
+		max-width:none;
+		padding:0 20px;
 	}
 }
 
