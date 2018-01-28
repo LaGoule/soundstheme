@@ -861,7 +861,6 @@ a:hover, a:active {
 
 .content-area article.category-eventson,
 .content-area article.category-eventsoff{
-	margin-bottom:0;
 
 }
 .sections .shop-picture{
@@ -920,7 +919,7 @@ a:hover, a:active {
   list-style-type:none;
   font-weight:600;
   line-height:1.18em;
-  padding:20px 5px;
+  padding:10px 0px;
 }
 
 .sections .sec-content a,
