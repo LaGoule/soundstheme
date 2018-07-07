@@ -1504,6 +1504,26 @@ object {
 		max-width:none;
 		padding:0 20px;
 	}
+	
+	/*img position background*/
+	#site-wrapper{
+		background:
+			/* Le son qui tue Event */
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/04.png) no-repeat 10% 2000%,
+			/* Chien */
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/01.png) no-repeat 50% 43%,
+			/* Logo Sounds flottant*/
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/tab/02.png) no-repeat 25% 58%,
+			/* Bonhomme danse */
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 93% 8008%,
+			/* Quadrillage */
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 70% 95%,
+			/* S */
+			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 50% 72%;
+}
+
+	
+	
 }
 
 /* Smartphones */
