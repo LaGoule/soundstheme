@@ -689,7 +689,7 @@ a:hover, a:active {
 		/* Logo Sounds flottant*/
 		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/02.png) no-repeat 8% 48%,
 		/* Bonhomme danse */
-		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 93% 83%,
+		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/03.png) no-repeat 93% 88%,
 		/* Quadrillage */
 		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 60% 95%,
 		/* S */
@@ -861,7 +861,10 @@ a:hover, a:active {
 }
 .content-area article p,
 .content-area article .su-expand{
-	padding: 0 20px;
+	padding: 0 40px;
+}
+.content-area article .su-expand p{
+	padding:0;
 }
 .content-area article img{
 	text-align:center;
@@ -928,11 +931,14 @@ a:hover, a:active {
 .sections .sec-content,
 .content-area article .entry-content{
   color:black;
-  font-size:1.32em;
+  font-size:1.2em;
   list-style-type:none;
-  font-weight:600;
-  line-height:1.18em;
+  font-weight:300;
+  line-height:1.3em;
   padding:10px 0px;
+}
+.content-area article .entry-content strong{
+	font-weight:500;
 }
 
 .sections .sec-content a,
