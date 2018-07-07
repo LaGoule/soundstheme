@@ -694,6 +694,7 @@ a:hover, a:active {
 		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 60% 95%,
 		/* S */
 		url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 50% 72%;
+
 }
 
 .shoppic{
@@ -858,11 +859,30 @@ a:hover, a:active {
 	background:white;
 	margin:60px 0 200px 0;
 	position:relative;
+
+/*
+		-webkit-transform-origin: top;
+		-ms-transform-origin: top;
+		-o-transform-origin: top;
+		transform-origin: top;
+
+		-webkit-transition:max-height ease-out 2s;
+		-moz-transition:max-height ease-out  2s;
+		-o-transition:max-height ease-out 2s;
+		transition:max-height ease-out 2s;
+*/
 }
 .content-area article p,
 .content-area article .su-expand{
 	padding: 0 40px;
 }
+
+.content-area article .su-expand-content{
+}
+
+.content-area article .su-expand.su-expand-collapsed .su-expand-content{
+}
+
 .content-area article .su-expand p{
 	padding:0;
 }
@@ -1521,19 +1541,18 @@ object {
 		top:120px;
 		left:30%;
 	}
+	.main-navigation li:nth-child(6) {
+		top:180px;
+		right:auto;
+		left:40%;
+		transform: rotate(-1deg);
+	}
 	.main-navigation li:nth-child(4) {
 		top:240px;
 		right:auto;
 		left:45%;
 		background:none;
 		border:none;
-	}
-	.main-navigation li:nth-child(4) a{
-		width:25px;
-		height:25px;
-		text-indent:-999em;
-		background: url('img/fb.png') no-repeat center;
-		background-size: 25px 25px;
 	}
 	.main-navigation li:nth-child(5) {
 		top:250px;
@@ -1542,23 +1561,7 @@ object {
 		background:none;
 		border:none;
 	}
-	.main-navigation li:nth-child(5) a{
-		width:25px;
-		height:25px;
-		text-indent:-999em;
-		background: url('img/ig.png') no-repeat center;
-		background-size: 25px 25px;
-	}
-	.main-navigation li:nth-child(6) {
-		top:180px;
-		right:auto;
-		left: 40%;
-		transform: rotate(-1deg);
-	}
 
-	.main-navigation li:nth-of-type(odd){
-		transform: rotate(-2deg);
-	}
 	.site-hours{
 		display:none;
 
@@ -1593,7 +1596,7 @@ object {
 		max-width:none;
 		padding:0 20px;
 	}
-	
+
 	/*img position background*/
 	#site-wrapper{
 		background:
@@ -1609,16 +1612,20 @@ object {
 			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/06.png) no-repeat 70% 95%,
 			/* S */
 			url(http://beuchatwaldis.ch/sounds/wp-content/themes/soundstheme/img/bg/05.PNG) no-repeat 50% 72%;
-}
-
-	
-	
+	}
 }
 
 /* Hybride */
 @media only screen and (max-width : 880px) {
+	.site-branding {
+		max-width: 400px;
+		padding-left:7%;
+		float: left;
+		clear:none;
+	}
 	.main-navigation{
-		max-width: calc(100% - 400px);
+		max-width: calc(100% - (400px + 7%));
+		padding-left:4%;
 	}
 	.site-hours{
 		display:none !important;
@@ -1626,6 +1633,14 @@ object {
 }
 
 /* Smartphones */
-@media only screen and (max-width : 480px) {
-
+@media only screen and (max-width : 600px) {
+	.site-branding {
+		max-width: 90%;
+		padding: 0 5%;
+		clear:left;
+	}
+	.main-navigation{
+		max-width: calc(80%);
+		padding:0 5%;
+	}
 }
