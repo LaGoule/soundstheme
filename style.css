@@ -702,7 +702,7 @@ a:hover, a:active {
 
 .site-header {
 	height:400px;
-	margin-bottom:60px;
+	margin-bottom:20px;
 	padding:0 20px;
 }
 .site-header img{
@@ -1483,6 +1483,95 @@ object {
 	#site-wrapper{
 	}
 
+	/* Header + Menu */
+
+	.site-header {
+		height:400px;
+		margin-bottom:60px;
+		padding:0 20px;
+	}
+	.site-header img{
+		max-width:400px;
+		height:auto;
+	}
+	.site-branding {
+		max-width: 400px;
+		float: left;
+		clear:none;
+	}
+	.main-navigation{
+		max-width: calc(100% - 620px);
+		height:100%;
+		float:left;
+		clear:none;
+		z-index:40;
+		position:relative;
+		top:58px;
+		right:20px;
+	}
+	.main-navigation li:nth-child(1) {
+		top:0;
+		left:20%;
+	}
+	.main-navigation li:nth-child(2) {
+		top:60px;
+		left:20%;
+	}
+	.main-navigation li:nth-child(3) {
+		top:120px;
+		left:30%;
+	}
+	.main-navigation li:nth-child(4) {
+		top:240px;
+		right:auto;
+		left:45%;
+		background:none;
+		border:none;
+	}
+	.main-navigation li:nth-child(4) a{
+		width:25px;
+		height:25px;
+		text-indent:-999em;
+		background: url('img/fb.png') no-repeat center;
+		background-size: 25px 25px;
+	}
+	.main-navigation li:nth-child(5) {
+		top:250px;
+		right:auto;
+		left: 60%;
+		background:none;
+		border:none;
+	}
+	.main-navigation li:nth-child(5) a{
+		width:25px;
+		height:25px;
+		text-indent:-999em;
+		background: url('img/ig.png') no-repeat center;
+		background-size: 25px 25px;
+	}
+	.main-navigation li:nth-child(6) {
+		top:180px;
+		right:auto;
+		left: 40%;
+		transform: rotate(-1deg);
+	}
+
+	.main-navigation li:nth-of-type(odd){
+		transform: rotate(-2deg);
+	}
+	.site-hours{
+		display:none;
+
+		max-width:220px;
+		display:block;
+		float:right;
+		position:relative;
+		top:20px;
+		line-height: 1.8;
+	}
+
+	/* Articles */
+
 	#main article:nth-child(1),
 	#main article:nth-child(2),
 	#main article:nth-child(4){
@@ -1524,6 +1613,16 @@ object {
 
 	
 	
+}
+
+/* Hybride */
+@media only screen and (max-width : 880px) {
+	.main-navigation{
+		max-width: calc(100% - 400px);
+	}
+	.site-hours{
+		display:none !important;
+	}
 }
 
 /* Smartphones */
